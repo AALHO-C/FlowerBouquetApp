@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 
     'flowerbouqurtapp.apps.core',
+    'flowerbouqurtapp.apps.about',
 ]
 
 MIDDLEWARE = [
