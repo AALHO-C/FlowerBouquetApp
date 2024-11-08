@@ -121,7 +121,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# Specify the base URL path for serving static files
+STATIC_URL = '/static/'
+
+# Define the directory path where Django will look for additional static files
+STATICFILES_DIRS = [
+    BASE_DIR / 'flowerbouqurtapp' / 'static',  # Adjust according to your base directory structure
+]
+
+# Specify the directory where static files are collected when you run `collectstatic`
+STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
